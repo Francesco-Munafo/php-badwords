@@ -13,7 +13,10 @@ $badword = $_POST['badword'];
     <title>Badword Submitted</title>
 </head>
 <body>
-    <p><?php echo $text; ?></p>
-    <h5>Text is </h5>
+    <h3>Your phrase is:</h3> <span><p><?php echo $text; ?></p></span>
+    <h5>Text is <?php echo strlen($text) ?> letters</h5>
+
+    <h3>Censored phrase is:</h3><span><?php echo str_replace($badword,'***', $text ); ?></p></span>
+
 </body>
 </html>
